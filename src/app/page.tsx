@@ -2,10 +2,11 @@ import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
 import { ServicesSection } from '@/components/ServicesSection'
 import { ProcessSection } from '@/components/ProcessSection'
-import { N8NShowcase } from '@/components/N8NShowcase'
-import { TestimonialsSection } from '@/components/TestimonialsSection'
+{/*import { N8NShowcase } from '@/components/N8NShowcase'
+import { TestimonialsSection } from '@/components/TestimonialsSection'*/}
 import { ContactSection } from '@/components/ContactSection'
 import { Footer } from '@/components/Footer'
+import { ScrollToTopButton } from '@/components/ScrollToTopButton'
 
 export default function Home() {
   return (
@@ -14,10 +15,11 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ProcessSection />
-      <N8NShowcase />
-      <TestimonialsSection />
+      {/* <N8NShowcase />
+      <TestimonialsSection /> */}
       <ContactSection />
       <Footer />
+      <ScrollToTopButton />
     </main>
   )
 }

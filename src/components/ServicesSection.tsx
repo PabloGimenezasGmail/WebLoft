@@ -1,5 +1,5 @@
 'use client'
-import { Globe, Calendar, Bot, Workflow, Database, Mail } from 'lucide-react'
+import { Globe, Calendar, Bot, Database, Mail, Megaphone } from 'lucide-react'
 
 export function ServicesSection() {
   const services = [
@@ -10,10 +10,10 @@ export function ServicesSection() {
       features: ["Diseño responsive", "Optimización SEO", "Formularios integrados", "Análisis de conversión"]
     },
     {
-      icon: Workflow,
-      title: "Mejora de Sitios Web",
-      description: "Optimización y modernización de sitios web existentes para mejorar rendimiento y experiencia de usuario.",
-      features: ["Auditoría completa", "Optimización velocidad", "UX/UI mejorado", "Integración herramientas"]
+      icon: Megaphone,
+      title: "Campañas de Marketing",
+      description: "Automatización de campañas de marketing multicanal para maximizar el alcance y optimizar la conversión.",
+      features: ["Marketing automation", "Análisis de audiencia", "Campañas personalizadas", "ROI tracking"]
     },
     {
       icon: Calendar,
@@ -49,7 +49,7 @@ export function ServicesSection() {
             Servicios de Automatización
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Soluciones completas para automatizar y optimizar los procesos de tu negocio con N8N
+            Soluciones completas para automatizar y optimizar los procesos de tu negocio con N8N, MCP y otras herramientas líderes
           </p>
         </div>
 

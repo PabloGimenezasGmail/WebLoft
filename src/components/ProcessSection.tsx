@@ -2,24 +2,34 @@
 import { Search, Lightbulb, Cog, Rocket } from 'lucide-react'
 
 export function ProcessSection() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contacto')
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   const steps = [
     {
       icon: Search,
       title: "Análisis",
-      description: "Evaluamos tus procesos actuales y identificamos oportunidades de automatización",
+      description: "Evaluamos tus procesos actuales e identificamos oportunidades de automatización",
       details: ["Auditoría de procesos", "Identificación de cuellos de botella", "Análisis de herramientas actuales"]
     },
     {
       icon: Lightbulb,
       title: "Estrategia",
-      description: "Diseñamos una estrategia personalizada de automatización con N8N",
+      description: "Diseñamos una estrategia personalizada de automatización",
       details: ["Plan de automatización", "Selección de herramientas", "Cronograma de implementación"]
     },
     {
       icon: Cog,
       title: "Implementación",
       description: "Configuramos y desarrollamos las automatizaciones paso a paso",
-      details: ["Configuración N8N", "Integraciones API", "Testing exhaustivo"]
+      details: ["Configuración de herramientas", "Implementación", "Testing exhaustivo"]
     },
     {
       icon: Rocket,
@@ -34,7 +44,7 @@ export function ProcessSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Mi Proceso de Trabajo
+            Proceso de Trabajo
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Un enfoque sistemático para transformar tu negocio con automatización
@@ -82,7 +92,10 @@ export function ProcessSection() {
               Cada proyecto es único. Programemos una consulta gratuita para evaluar cómo 
               la automatización puede transformar tu negocio.
             </p>
-            <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+            <button 
+              onClick={scrollToContact}
+              className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+            >
               Consulta Gratuita
             </button>
           </div>
