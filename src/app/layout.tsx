@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     creator: '@automateflow',
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: '2VwQna6pMQle1PbLfO2Zo_TFBWmgVcpJkQjfoYNZ9AQ',
   },
   alternates: {
     canonical: 'https://web-loft.vercel.app/',
