@@ -5,10 +5,28 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// Variables de configuración SEO
+const SITE_NAME = 'AutomateFlow'
+const SITE_URL = 'https://web-loft.vercel.app/'
+const SITE_TITLE = 'AutomateFlow | Automatización de Procesos Empresariales'
+const SITE_DESCRIPTION = 'Especialistas en automatización de procesos para autónomos y PYMES. Creamos landing pages, automatizamos campañas de marketing, sincronizamos calendarios y optimizamos flujos de trabajo con N8N. Consulta gratuita disponible.'
+//const SITE_IMAGE = '/images/AutomateFlow_Logo.png'
+const SITE_ICON = '/favicon.ico'
+const GOOGLE_VERIFICATION = '2VwQna6pMQle1PbLfO2Zo_TFBWmgVcpJkQjfoYNZ9AQ'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://web-loft.vercel.app/'),
-  title: 'Automatización de Procesos Empresariales | AutomateFlow',
-  description: 'Especialistas en automatización de procesos para autónomos y PYMES. Creamos landing pages, automatizamos campañas de marketing, sincronizamos calendarios y optimizamos flujos de trabajo con N8N. Consulta gratuita disponible.',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  icons: {
+    icon: SITE_ICON,
+    shortcut: SITE_ICON,
+    apple: SITE_ICON,
+  },
   keywords: [
     'N8N',
     'automatización de procesos',
@@ -27,9 +45,14 @@ export const metadata: Metadata = {
     'consultoría automatización',
     'España automatización'
   ],
-  authors: [{ name: 'AutomateFlow' }],
-  creator: 'AutomateFlow',
-  publisher: 'AutomateFlow',
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   robots: {
     index: true,
     follow: true,
@@ -44,31 +67,32 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://web-loft.vercel.app/',
-    siteName: 'AutomateFlow',
-    title: 'Automatización de Procesos Empresariales | AutomateFlow',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
     description: 'Especialistas en automatización de procesos para autónomos y PYMES. Optimiza tu tiempo y aumenta tu productividad con nuestras soluciones de automatización.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: SITE_ICON,
         width: 1200,
         height: 630,
-        alt: 'AutomateFlow - Automatización de Procesos Empresariales',
+        alt: `${SITE_NAME} - Automatización de Procesos Empresariales`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Automatización de Procesos Empresariales con N8N | AutomateFlow',
+    title: SITE_TITLE,
     description: 'Especialistas en automatización de procesos para autónomos y PYMES. Optimiza tu tiempo y aumenta tu productividad.',
-    images: ['/og-image.jpg'],
+    images: [SITE_ICON],
     creator: '@automateflow',
+    site: '@automateflow',
   },
   verification: {
-    google: '2VwQna6pMQle1PbLfO2Zo_TFBWmgVcpJkQjfoYNZ9AQ',
+    google: GOOGLE_VERIFICATION,
   },
   alternates: {
-    canonical: 'https://web-loft.vercel.app/',
+    canonical: SITE_URL,
   },
   category: 'technology',
 }

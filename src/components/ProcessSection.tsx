@@ -56,19 +56,19 @@ export function ProcessSection() {
             const IconComponent = step.icon
             return (
               <div key={index} className="relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                   <div className="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-4">
                     <IconComponent className="h-8 w-8 text-indigo-600" />
                   </div>
-                  <div className="text-center mb-4">
+                  <div className="text-center mb-4 flex-grow">
                     <div className="text-sm font-semibold text-indigo-600 mb-2">PASO {index + 1}</div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mt-auto">
                     {step.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center text-sm text-gray-600">
-                        <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2"></div>
+                        <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2 flex-shrink-0"></div>
                         {detail}
                       </li>
                     ))}
