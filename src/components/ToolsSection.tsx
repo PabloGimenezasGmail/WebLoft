@@ -11,6 +11,7 @@ export function ToolsSection() {
     { name: 'Outlook', logo: 'https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/microsoft-outlook.svg', category: 'Email' },
     { name: 'Slack', logo: 'https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg', category: 'Comunicación' },
     { name: 'Microsoft Teams', logo: 'https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg', category: 'Comunicación' },
+    { name: 'WhatsApp', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg', category: 'Mensajería' },
     { name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png', category: 'Gestión' },
     { name: 'Airtable', logo: 'https://cdn.worldvectorlogo.com/logos/airtable-1.svg', category: 'Base de Datos' }
   ]
@@ -22,6 +23,7 @@ export function ToolsSection() {
     { name: 'PayPal', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg', category: 'Pagos' },
     { name: 'Salesforce', logo: 'https://cdn.worldvectorlogo.com/logos/salesforce-2.svg', category: 'CRM' },
     { name: 'Mailchimp', logo: 'https://cdn.worldvectorlogo.com/logos/mailchimp-freddie-icon.svg', category: 'Marketing' },
+    { name: 'Telegram', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg', category: 'Mensajería' },
     { name: 'Trello', logo: 'https://cdn.worldvectorlogo.com/logos/trello.svg', category: 'Gestión' },
     { name: 'Asana', logo: 'https://cdn.worldvectorlogo.com/logos/asana-logo.svg', category: 'Gestión' },
     { name: 'Zapier', logo: 'https://cdn.worldvectorlogo.com/logos/zapier.svg', category: 'Automatización' },
