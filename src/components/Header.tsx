@@ -17,6 +17,8 @@ export function Header() {
           <nav className="hidden md:flex space-x-8">
             <a href="#servicios" className="text-gray-700 hover:text-indigo-600 font-medium">Servicios</a>
             <a href="#proceso" className="text-gray-700 hover:text-indigo-600 font-medium">Proceso</a>
+            <a href="#herramientas" className="text-gray-700 hover:text-indigo-600 font-medium">Herramientas</a>
+            <a href="#sobre-nosotros" className="text-gray-700 hover:text-indigo-600 font-medium">Sobre Nosotros</a>
             {/*<a href="#n8n" className="text-gray-700 hover:text-indigo-600 font-medium">N8N</a>
             <a href="#testimonios" className="text-gray-700 hover:text-indigo-600 font-medium">Testimonios</a>*/}
             <a href="#contacto" className="text-gray-700 hover:text-indigo-600 font-medium">Contacto</a>
@@ -35,6 +37,8 @@ export function Header() {
             <nav className="flex flex-col space-y-2">
               <a href="#servicios" className="text-gray-700 hover:text-indigo-600 font-medium py-2">Servicios</a>
               <a href="#proceso" className="text-gray-700 hover:text-indigo-600 font-medium py-2">Proceso</a>
+              <a href="#herramientas" className="text-gray-700 hover:text-indigo-600 font-medium py-2">Herramientas</a>
+              <a href="#sobre-nosotros" className="text-gray-700 hover:text-indigo-600 font-medium py-2">Sobre Nosotros</a>
               {/*<a href="#n8n" className="text-gray-700 hover:text-indigo-600 font-medium py-2">N8N</a>
               <a href="#testimonios" className="text-gray-700 hover:text-indigo-600 font-medium py-2">Testimonios</a>*/}
               <a href="#contacto" className="text-gray-700 hover:text-indigo-600 font-medium py-2">Contacto</a>

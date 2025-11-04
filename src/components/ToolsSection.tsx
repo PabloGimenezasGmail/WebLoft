@@ -2,7 +2,7 @@
 import { Share2 } from 'lucide-react'
 
 export function ToolsSection() {
-  const toolsRow1 = [
+  const tools = [
     { name: 'N8N', logo: 'https://avatars.githubusercontent.com/u/45487711?s=200&v=4', category: 'Automatización' },
     { name: 'Google Drive', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg', category: 'Almacenamiento' },
     { name: 'Google Calendar', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg', category: 'Productividad' },
@@ -13,10 +13,7 @@ export function ToolsSection() {
     { name: 'Microsoft Teams', logo: 'https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg', category: 'Comunicación' },
     { name: 'WhatsApp', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg', category: 'Mensajería' },
     { name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png', category: 'Gestión' },
-    { name: 'Airtable', logo: 'https://cdn.worldvectorlogo.com/logos/airtable-1.svg', category: 'Base de Datos' }
-  ]
-
-  const toolsRow2 = [
+    { name: 'Airtable', logo: 'https://cdn.worldvectorlogo.com/logos/airtable-1.svg', category: 'Base de Datos' },
     { name: 'Shopify', logo: 'https://cdn.worldvectorlogo.com/logos/shopify.svg', category: 'E-commerce' },
     { name: 'WooCommerce', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg', category: 'E-commerce' },
     { name: 'Stripe', logo: 'https://cdn.worldvectorlogo.com/logos/stripe-4.svg', category: 'Pagos' },
@@ -30,14 +27,10 @@ export function ToolsSection() {
     { name: 'Make', logo: 'https://cdn.simpleicons.org/make/6D00CC', category: 'Automatización' }
   ]
 
-  // Duplicamos las herramientas para el efecto de loop infinito
-  const duplicatedRow1 = [...toolsRow1, ...toolsRow1, ...toolsRow1]
-  const duplicatedRow2 = [...toolsRow2, ...toolsRow2, ...toolsRow2]
-
   return (
-    <section id="herramientas" className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-      <div className="max-w-7xl mx-auto mb-12">
-        <div className="text-center">
+    <section id="herramientas" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             Herramientas con las que Trabajamos
           </h2>
@@ -45,105 +38,82 @@ export function ToolsSection() {
             Integramos las plataformas más populares del mercado
           </p>
         </div>
-      </div>
 
-      {/* Carrusel infinito - Primera fila */}
-      <div className="relative mb-6">
-        <div className="flex gap-4 animate-scroll">
-          {duplicatedRow1.map((tool, index) => (
-            <div
-              key={`row1-${index}`}
-              className="flex-shrink-0 bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 w-40 group"
-            >
-              <div className="flex flex-col items-center text-center space-y-2">
-                <div className="w-16 h-16 flex items-center justify-center p-2 rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 group-hover:scale-110 transition-transform duration-300">
-                  <img 
-                    src={tool.logo} 
-                    alt={`${tool.name} logo`}
-                    className="w-full h-full object-contain"
-                  />
+        {/* Contenedor central con imagen y órbitas */}
+        <div className="relative flex items-center justify-center min-h-[600px] mb-12">
+          {/* Imagen central del móvil */}
+          <div className="relative z-10">
+            <img 
+              src="/images/ShowCase.png"
+              alt="WhatsApp Automation"
+              className="w-64 md:w-80 h-auto drop-shadow-2xl"
+            />
+          </div>
+
+          {/* Iconos orbitando */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            {tools.map((tool, index) => {
+              const angle = (index * 360) / tools.length
+              const radius = 280 // Radio de la órbita
+              
+              return (
+                <div
+                  key={tool.name}
+                  className="absolute animate-orbit"
+                  style={{
+                    animationDelay: `${-index * (20 / tools.length)}s`,
+                    '--angle': `${angle}deg`,
+                    '--radius': `${radius}px`
+                  } as React.CSSProperties}
+                >
+                  <div className="bg-white rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 w-16 h-16 flex items-center justify-center group">
+                    <img 
+                      src={tool.logo} 
+                      alt={`${tool.name} logo`}
+                      className="w-10 h-10 object-contain"
+                      title={tool.name}
+                    />
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">{tool.name}</h3>
-                  <p className="text-xs text-gray-500">{tool.category}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              )
+            })}
+          </div>
         </div>
-      </div>
 
-      {/* Carrusel infinito - Segunda fila (dirección inversa) */}
-      <div className="relative">
-        <div className="flex gap-4 animate-scroll-reverse">
-          {duplicatedRow2.map((tool, index) => (
-            <div
-              key={`row2-${index}`}
-              className="flex-shrink-0 bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 w-40 group"
-            >
-              <div className="flex flex-col items-center text-center space-y-2">
-                <div className="w-16 h-16 flex items-center justify-center p-2 rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 group-hover:scale-110 transition-transform duration-300">
-                  <img 
-                    src={tool.logo} 
-                    alt={`${tool.name} logo`}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">{tool.name}</h3>
-                  <p className="text-xs text-gray-500">{tool.category}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="text-center">
+          <button 
+            onClick={() => {
+              const contactSection = document.getElementById('contacto')
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            }}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center"
+          >
+            Consultar Integración
+            <Share2 className="ml-2 h-5 w-5" />
+          </button>
         </div>
-      </div>
-
-      <div className="text-center mt-12">
-        <button 
-          onClick={() => {
-            const contactSection = document.getElementById('contacto')
-            if (contactSection) {
-              contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-          }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center"
-        >
-          Consultar Integración
-          <Share2 className="ml-2 h-5 w-5" />
-        </button>
       </div>
 
       <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
+        @keyframes orbit {
+          from {
+            transform: rotate(0deg) translateX(var(--radius)) rotate(0deg);
           }
-          100% {
-            transform: translateX(-33.333%);
-          }
-        }
-        
-        @keyframes scrollReverse {
-          0% {
-            transform: translateX(-33.333%);
-          }
-          100% {
-            transform: translateX(0);
+          to {
+            transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg);
           }
         }
         
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
+        .animate-orbit {
+          animation: orbit 20s linear infinite;
         }
         
-        .animate-scroll-reverse {
-          animation: scrollReverse 30s linear infinite;
-        }
-        
-        .animate-scroll:hover,
-        .animate-scroll-reverse:hover {
-          animation-play-state: paused;
+        @media (max-width: 768px) {
+          .animate-orbit {
+            --radius: 180px !important;
+          }
         }
       `}</style>
     </section>
