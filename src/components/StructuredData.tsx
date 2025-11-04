@@ -6,11 +6,15 @@ export function StructuredData() {
         "@type": "Organization",
         "@id": "https://web-loft.vercel.app/#organization",
         "name": "AutomateFlow",
+        "alternateName": "AutomateFlow - Automatización de Procesos",
         "url": "https://web-loft.vercel.app/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://web-loft.vercel.app/logo.png"
+          "url": "https://web-loft.vercel.app/favicon.ico",
+          "width": "512",
+          "height": "512"
         },
+        "image": "https://web-loft.vercel.app/favicon.ico",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+34-600-24-31-22",
@@ -25,25 +29,26 @@ export function StructuredData() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://web-loft.vercel.app//#website",
+        "@id": "https://web-loft.vercel.app/#website",
         "url": "https://web-loft.vercel.app/",
-        "name": "AutomateFlow",
+        "name": "AutomateFlow - Automatización de Procesos Empresariales",
+        "alternateName": "AutomateFlow",
         "description": "Especialistas en automatización de procesos para autónomos y PYMES",
         "publisher": {
-          "@id": "https://web-loft.vercel.app//#organization"
+          "@id": "https://web-loft.vercel.app/#organization"
         },
         "inLanguage": "es-ES"
       },
       {
         "@type": "WebPage",
-        "@id": "https://web-loft.vercel.app//#webpage",
+        "@id": "https://web-loft.vercel.app/#webpage",
         "url": "https://web-loft.vercel.app/",
-        "name": "Automatización de Procesos Empresariales con N8N | AutomateFlow",
+        "name": "AutomateFlow | Automatización de Procesos Empresariales",
         "isPartOf": {
-          "@id": "https://web-loft.vercel.app//#website"
+          "@id": "https://web-loft.vercel.app/#website"
         },
         "about": {
-          "@id": "https://web-loft.vercel.app//#organization"
+          "@id": "https://web-loft.vercel.app/#organization"
         },
         "description": "Especialistas en automatización de procesos para autónomos y PYMES. Creamos landing pages, automatizamos campañas de marketing y optimizamos flujos de trabajo.",
         "inLanguage": "es-ES"
@@ -52,7 +57,7 @@ export function StructuredData() {
         "@type": "Service",
         "serviceType": "Business Process Automation",
         "provider": {
-          "@id": "https://web-loft.vercel.app//#organization"
+          "@id": "https://web-loft.vercel.app/#organization"
         },
         "name": "Automatización de Procesos Empresariales",
         "description": "Servicios de automatización de procesos empresariales incluyendo landing pages, marketing automation, sincronización de calendarios y chatbots inteligentes",
@@ -98,9 +103,9 @@ export function StructuredData() {
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://web-loft.vercel.app//#localbusiness",
+        "@id": "https://web-loft.vercel.app/#localbusiness",
         "name": "AutomateFlow",
-        "image": "https://web-loft.vercel.app//logo.png",
+        "image": "https://web-loft.vercel.app/favicon.ico",
         "telephone": "+34-600-24-31-22",
         "email": "mgarciasospedra@gmail.com",
         "url": "https://web-loft.vercel.app/",
