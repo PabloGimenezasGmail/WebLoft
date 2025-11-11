@@ -4,6 +4,7 @@ import { ServicesSection } from '@/components/ServicesSection'
 import { ProcessSection } from '@/components/ProcessSection'
 import { ToolsSection } from '@/components/ToolsSection'
 import { AboutSection } from '@/components/AboutSection'
+import { CaseStudiesSection } from '@/components/CaseStudiesSection'
 {/*import { N8NShowcase } from '@/components/N8NShowcase'
 import { TestimonialsSection } from '@/components/TestimonialsSection'*/}
 import { ContactSection } from '@/components/ContactSection'
@@ -19,6 +20,7 @@ export default function Home() {
       <ProcessSection />
       <ToolsSection />
       <AboutSection />
+      <CaseStudiesSection />
       {/* <N8NShowcase />
       <TestimonialsSection /> */}
       <ContactSection />

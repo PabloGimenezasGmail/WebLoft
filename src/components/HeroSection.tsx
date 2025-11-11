@@ -32,7 +32,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button 
               onClick={scrollToContact}
-              className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center"
+              className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center"
             >
               Comenzar ahora
               <ArrowRight className="ml-2 h-5 w-5" />

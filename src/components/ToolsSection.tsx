@@ -88,7 +88,7 @@ export function ToolsSection() {
                 contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }
             }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center"
+            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center"
           >
             Consultar Integración
             <Share2 className="ml-2 h-5 w-5" />
